@@ -237,55 +237,65 @@ document.addEventListener('DOMContentLoaded', function() {
     createStars();
 });
 
-// Project Category Navigation
+// Project category navigation
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all category buttons
-    const categoryButtons = document.querySelectorAll('.category-btn');
-    const backButton = document.querySelector('.back-to-categories');
-    const categoriesContainer = document.querySelector('.row.g-4.mb-5');
-    const projectCardsContainer = document.querySelector('.project-cards');
-    const categoryTitle = document.querySelector('.category-title');
-    const categoryProjects = document.querySelectorAll('.category-projects');
-    
-    // Add click event to category buttons
-    categoryButtons.forEach(button => {
+    // Show projects when category is clicked
+    document.querySelectorAll('.category-btn').forEach(function(button) {
         button.addEventListener('click', function() {
-            const category = this.closest('.category-card').dataset.category;
-            const categoryName = this.closest('.category-card').querySelector('h3').textContent;
+            const category = this.closest('.category-card').getAttribute('data-category');
+            console.log('Category clicked:', category);
             
-            // Hide categories, show projects
-            categoriesContainer.style.display = 'none';
-            projectCardsContainer.style.display = 'block';
+            // Show project cards container
+            document.querySelector('.project-cards').style.display = 'block';
             
-            // Update category title
-            categoryTitle.textContent = categoryName + ' Projects';
-            
-            // Hide all project categories first
-            categoryProjects.forEach(projectCategory => {
-                projectCategory.style.display = 'none';
+            // Hide all category projects first
+            document.querySelectorAll('.category-projects').forEach(function(project) {
+                project.style.display = 'none';
             });
             
-            // Show selected category projects
-            document.getElementById(category + '-projects').style.display = 'flex';
+            // Show the selected category projects
+            document.getElementById(category + '-projects').style.display = 'block';
             
-            // Scroll to top of projects section
-            document.getElementById('works').scrollIntoView({behavior: 'smooth'});
-            
-            // Reinitialize AOS for new elements
-            AOS.refresh();
+            // Hide categories section
+            document.querySelector('.row.g-4.mb-5.justify-content-center').style.display = 'none';
         });
     });
     
-    // Add click event to back button
-    backButton.addEventListener('click', function() {
-        // Hide projects, show categories
-        projectCardsContainer.style.display = 'none';
-        categoriesContainer.style.display = 'flex';
+    // Back to categories
+    document.querySelector('.back-to-categories').addEventListener('click', function() {
+        // Hide project cards
+        document.querySelector('.project-cards').style.display = 'none';
         
-        // Scroll to top of works section
-        document.getElementById('works').scrollIntoView({behavior: 'smooth'});
+        // Show categories
+        document.querySelector('.row.g-4.mb-5.justify-content-center').style.display = 'flex';
+    });
+});
+
+
+// Ensure modals work properly on all devices
+document.addEventListener('DOMContentLoaded', function() {
+    // Fix for iOS devices
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.addEventListener('shown.bs.modal', function() {
+            document.body.classList.add('modal-open');
+        });
         
-        // Reinitialize AOS
-        AOS.refresh();
+        modal.addEventListener('hidden.bs.modal', function() {
+            document.body.classList.remove('modal-open');
+        });
+    });
+    
+    // Ensure buttons trigger modals properly
+    const modalButtons = document.querySelectorAll('[data-bs-toggle="modal"]');
+    modalButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const targetModal = this.getAttribute('data-bs-target');
+            if (targetModal) {
+                e.preventDefault();
+                const modal = new bootstrap.Modal(document.querySelector(targetModal));
+                modal.show();
+            }
+        });
     });
 });

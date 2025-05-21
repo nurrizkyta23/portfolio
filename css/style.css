@@ -279,6 +279,25 @@ body {
     text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
 }
 
+.btn-download-cv {
+    cursor: pointer;
+    background: linear-gradient(to right, #0066cc, #ff00ff);
+    border-color: transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-download-cv:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 77, 153, 0.3);
+}
+
 /* Responsive Improvements */
 @media (max-width: 768px) {
     .category-card {
@@ -481,16 +500,101 @@ body {
 
 /* Project Card Hover Effect */
 .project-card-hover {
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 0, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #111827;
+    color: #ffffff;
 }
 
 .project-card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.7);
-    border: 1px solid rgba(255, 0, 255, 0.5);
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.2), rgba(255, 0, 255, 0.2));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive Project Cards */
+.project-cards {
+    display: none;
+    min-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .project-cards {
+        min-height: 200px;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .back-to-categories {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .case-card {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-cards {
+        min-height: 150px;
+    }
+    
+    .case-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .case-content p {
+        font-size: 0.9rem;
+    }
+}
+/* Project Cards Styling */
+.project-cards {
+    padding: 2rem 0;
+}
+
+.category-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.back-to-categories {
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-to-categories:hover {
+    background-color: #fff;
+    color: #121212;
+}
+
+@media (max-width: 768px) {
+    .project-cards .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category-title {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .back-to-categories {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 
 /* Project Card Images */
 /* Project Image Overlay */
@@ -603,6 +707,91 @@ body {
     box-shadow: 0 0 15px rgba(0, 102, 204, 0.7);
 }
 
+/* Enhanced Modal Responsiveness */
+.modal {
+    z-index: 1050;
+  }
+  
+  .modal-dialog {
+    margin: 0.5rem auto;
+  }
+  
+  .modal-content {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background-color: var(--darker-bg);
+    color: var(--text-color);
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 767.98px) {
+    .modal-dialog {
+      width: 95%;
+      max-width: none;
+      margin: 10px auto;
+    }
+    
+    .modal-content {
+      border-radius: 10px;
+    }
+    
+    .modal-body {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 15px;
+      max-height: 80vh;
+    }
+    
+    /* Improve image display on mobile */
+    .modal-body .img-fluid {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    
+    /* Better spacing for mobile */
+    .modal-body .row {
+      margin: 0;
+    }
+    
+    /* Ensure buttons are properly sized and spaced */
+    .modal-body .btn {
+      margin-bottom: 10px;
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+    
+    .modal-header {
+      padding: 15px;
+    }
+    
+    .modal-footer {
+      padding: 15px;
+    }
+    
+    /* Make close button more visible and touchable */
+    .modal .close {
+      font-size: 24px;
+      padding: 10px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 10;
+      color: var(--text-color);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .modal-lg {
+      max-width: 90%;
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+  }
+
 /* Tool Icons Styling */
 .tools-section {
     margin-bottom: 15px;
@@ -693,6 +882,219 @@ body {
 .back-to-categories:hover {
     transform: translateX(-5px);
 }
+
+/* Enhanced Modal Responsiveness */
+.modal {
+    z-index: 1050;
+  }
+  
+  .modal-dialog {
+    margin: 0.5rem auto;
+  }
+  
+  .modal-content {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 767.98px) {
+    .modal-fullscreen-sm-down {
+      width: 100vw;
+      max-width: none;
+      height: 100%;
+      margin: 0;
+    }
+    
+    .modal-fullscreen-sm-down .modal-content {
+      height: 100vh;
+      border-radius: 0;
+      border: none;
+    }
+    
+    .modal-body {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 80px; /* Extra padding to ensure content isn't hidden behind footer */
+    }
+    
+    .modal-dialog-centered {
+      align-items: stretch !important;
+      min-height: calc(100% - 1rem);
+    }
+    
+    /* Improve image display on mobile */
+    .modal-body .img-fluid {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    
+    /* Better spacing for mobile */
+    .modal-body .row {
+      margin: 0;
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .modal-lg {
+      max-width: 90%;
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+  }
+
+/* Enhanced Modal Responsiveness */
+.modal {
+    z-index: 1060;
+    position: fixed;
+  }
+  
+  .modal-dialog {
+    margin: 0.5rem auto;
+  }
+  
+  .modal-content {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transform: none !important; /* Prevent any transform effects */
+    transition: none !important; /* Prevent transitions */
+  }
+  
+  /* Prevent hover effects on modal content */
+  .modal-content:hover,
+  .modal-body:hover,
+  .modal-header:hover,
+  .modal-footer:hover {
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
+  }
+  
+  .modal-body img:hover {
+    transform: none !important; /* Override the scale effect on images in modal */
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 767.98px) {
+    .modal-fullscreen-sm-down {
+      width: 100vw;
+      max-width: none;
+      height: 100%;
+      margin: 0;
+    }
+    
+    .modal-fullscreen-sm-down .modal-content {
+      height: 100vh;
+      border-radius: 0;
+      border: none;
+    }
+    
+    .modal-body {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 80px; /* Extra padding to ensure content isn't hidden behind footer */
+    }
+    
+    .modal-dialog-centered {
+      align-items: stretch !important;
+      min-height: calc(100% - 1rem);
+    }
+    
+    /* Improve image display on mobile */
+    .modal-body .img-fluid {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    
+    /* Better spacing for mobile */
+    .modal-body .row {
+      margin: 0;
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .modal-lg {
+      max-width: 90%;
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+  }
+
+
+  /* Improved Project Cards Responsiveness */
+@media (max-width: 767.98px) {
+    .project-cards {
+      padding: 1rem;
+    }
+    
+    .case-card {
+      padding: 1.25rem;
+    }
+    
+    .case-content {
+      position: relative;
+      padding: 1rem;
+      width: 100%;
+    }
+    
+    .category-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    
+    .back-to-categories {
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
+  }
+  
+  /* Tablet optimizations */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .project-cards {
+      padding: 1.5rem;
+    }
+    
+    .case-card {
+      min-height: auto;
+    }
+  }
+
+  /* Fix for modal interaction issues */
+.modal-open {
+    overflow: auto !important;
+  }
+  
+  .modal-backdrop {
+    z-index: 1040 !important;
+  }
+  
+  .modal {
+    z-index: 1050 !important;
+  }
+  
+  /* Ensure elements are clickable after modal closes */
+  .modal-backdrop.fade.show {
+    opacity: 0.5;
+  }
+  
+  body.modal-open .case-card,
+  body.modal-open .category-card,
+  body.modal-open .btn {
+    position: relative;
+    z-index: auto;
+  }
+  
+  /* Fix for hover effects persisting after modal close */
+  .modal-open .project-card-hover:hover {
+    transform: none;
+  }
+
 
 /* Achievement Card Styles */
 .achievement-card {

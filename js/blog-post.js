@@ -189,11 +189,15 @@ function loadRelatedPosts(currentPostId) {
         const postHTML = `
             <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                 <div class="blog-related-post-card">
-                    <img src="images/blog-${post.id}.jpg" alt="${post.title}" class="blog-related-post-img img-fluid">
+                    <div class="blog-related-post-img-container">
+                        <img src="images/blog-${post.id}.jpg" alt="${post.title}" class="blog-related-post-img img-fluid">
+                        <div class="blog-related-post-category">${post.category}</div>
+                    </div>
                     <div class="blog-related-post-content">
                         <h4 class="blog-related-post-title">${post.title}</h4>
-                        <p class="blog-related-post-date">${post.date}</p>
-                        <a href="blog-post.html?id=${post.id}" class="btn btn-outline-primary btn-sm">Read More</a>
+                        <p class="blog-related-post-date"><i class="far fa-calendar-alt me-2"></i>${post.date}</p>
+                        <p class="blog-related-post-excerpt">${post.excerpt.substring(0, 100)}...</p>
+                        <a href="blog-post.html?id=${post.id}" class="btn btn-primary btn-sm">Read More</a>
                     </div>
                 </div>
             </div>

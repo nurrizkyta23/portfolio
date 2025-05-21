@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>My Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +13,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -62,7 +64,7 @@
                     </h1>
 
                     <div class="mt-4 position-relative" style="z-index: 100;">
-                        <a href="files/Nurrizkyta_Aulia.pdf" class="btn btn-outline-light btn-lg" download>
+                        <a href="https://drive.google.com/file/d/14fZjFqhgV4As8nCv04FaDKAE5ycixZnn/view?usp=sharing" target="_blank" class="btn-download-cv">
                             <i class="fas fa-download me-2"></i>Download My CV
                         </a>
                     </div>
@@ -202,29 +204,29 @@
                 </div>
             
             <!-- Project Cards (Initially Hidden) -->
-            <div class="project-cards" style="display: none;">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="category-title">Category Projects</h3>
-                    <button class="btn btn-sm btn-outline-light back-to-categories">← Back to Categories</button>
+            <div class="project-cards" style="display: none; min-height: 500px;">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+                    <h3 class="category-title mb-3 mb-md-0">Category Projects</h3>
+                    <button class="btn btn-sm btn-outline-light back-to-categories w-100 w-md-auto">← Back to Categories</button>
                 </div>
                 
                 <!-- Business Development Projects (now includes Business Analytics) -->
                 <div class="row g-4 category-projects" id="business-development-projects" style="display: none;">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
-                                <h3>Chief Financial Officer Dollipop Bouquet</h3>
-                                <p><strong>Role:</strong>Chief Financial Officer</p>
+                                <h3 class="fs-5 fs-md-4">Chief Financial Officer Dollipop Bouquet</h3>
+                                <p><strong>Role:</strong> Chief Financial Officer</p>
                                 <p><strong>Timeline:</strong> Sept 2024 - Present</p>
                                 <p>In charge as the CFO of Dollipop Bouquet, I'm responsible in Financial Analysis and report for business growth</p>
-                                <button class="btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#businessProject1Modal">View More</button>
+                                <button class="btn btn-outline-light mt-3 w-100 w-md-auto" data-bs-toggle="modal" data-bs-target="#businessProject1Modal">View More</button>
                             </div>
                         </div>
                     </div>
                 </div>
             
                 <div class="row g-4 category-projects" id="product-management-projects" style="display: none;">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
                                 <h3>Jivajoy — Website for Postpartum Well-being</h3>
@@ -235,7 +237,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
                                 <h3>MaxPro – Outsourcing Management Platform</h3>
@@ -250,7 +252,7 @@
                 
                 <!-- Web Development Projects -->
                 <div class="row g-4 category-projects" id="web-development-projects" style="display: none;">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
                                 <h3>ShrimpFarm — Shrimp Farming Digitalizing Solution</h3>
@@ -261,7 +263,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
                                 <h3>Tanami — Urban Farming Solution</h3>
@@ -272,7 +274,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
                                 <h3>UMKMScaleHub — UMKM Platform to Scale Up Business</h3>
@@ -283,7 +285,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="case-card project-card-hover">
                             <div class="case-content">
                                 <h3>NestEye - Endemic Bird Detection </h3>
@@ -302,7 +304,7 @@
     <!-- Project Modals -->
     <!-- Project 1 Modal -->
     <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project1ModalLabel">Jivajoy — AI-Powered Website for Postpartum Well-being</h5>
@@ -362,7 +364,7 @@
 
     <!-- Project 2 Modal -->
     <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project2ModalLabel">MaxPro – Outsourcing Management Platform (BSI PRO)</h5>
@@ -420,7 +422,7 @@
 
     <!-- Project 3 Modal -->
     <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project3ModalLabel">Chief Financial Officer - Dollipop Bouquet</h5>
@@ -478,7 +480,7 @@
 
     <!-- Project 4 Modal -->
     <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project4ModalLabel">Tanami — Urban Farming Solution for Green Cities</h5>
@@ -536,7 +538,7 @@
 
         <!-- Business Project 1 Modal -->
         <div class="modal fade" id="businessProject1Modal" tabindex="-1" aria-labelledby="businessProject1ModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="businessProject1ModalLabel">Chief Financial Officer - Dollipop Bouquet</h5>
@@ -594,7 +596,7 @@
     
         <!-- ShrimpFarm Modal -->
         <div class="modal fade" id="shrimpFarmModal" tabindex="-1" aria-labelledby="shrimpFarmModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="shrimpFarmModalLabel">ShrimpFarm — Shrimp Farming Digitalizing Solution</h5>
@@ -648,7 +650,7 @@
     
         <!-- UMKMScaleHub Modal -->
         <div class="modal fade" id="umkmScaleHubModal" tabindex="-1" aria-labelledby="umkmScaleHubModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="umkmScaleHubModalLabel">UMKMScaleHub — UMKM Platform to Scale Up Business</h5>
@@ -702,7 +704,7 @@
     
         <!-- NestEye Modal -->
         <div class="modal fade" id="nestEyeModal" tabindex="-1" aria-labelledby="nestEyeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="nestEyeModalLabel">NestEye - Endemic Bird Detection</h5>
@@ -758,7 +760,7 @@
     <!-- Achievement Modals -->
     <!-- Competition Modal -->
     <div class="modal fade" id="competitionModal" tabindex="-1" aria-labelledby="competitionModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="competitionModalLabel">IT Business Competition Wins</h5>
@@ -848,7 +850,7 @@
 
     <!-- Awards Modal -->
     <div class="modal fade" id="awardsModal" tabindex="-1" aria-labelledby="awardsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="awardsModalLabel">Prestigious Awards</h5>
@@ -887,7 +889,7 @@
 
         <!-- Scientific Publications Modal -->
         <div class="modal fade" id="publicationsModal" tabindex="-1" aria-labelledby="publicationsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
                         <h5 class="modal-title" id="publicationsModalLabel">Scientific Publications</h5>
@@ -934,7 +936,7 @@
 
     <!-- Project 1 Modal -->
     <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project1ModalLabel">Jivajoy — AI-Powered Website for Postpartum Well-being</h5>
@@ -942,10 +944,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="row mb-4">
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <img src="images/jivajoy.jpg" alt="Jivajoy Project" class="img-fluid rounded mb-3">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <p><strong>Role:</strong> Project Manager</p>
                             <p><strong>Timeline:</strong> Sep – Nov 2024</p>
                             <div class="tools-section">
@@ -994,7 +996,7 @@
 
     <!-- Project 2 Modal -->
     <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project2ModalLabel">MaxPro – Outsourcing Management Platform (BSI PRO)</h5>
@@ -1002,10 +1004,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="row mb-4">
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <img src="images/maxpro.jpg" alt="MaxPro Project" class="img-fluid rounded mb-3">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <p><strong>Role:</strong> Product Manager Intern</p>
                             <p><strong>Timeline:</strong> Aug 2024 – Jan 2025</p>
                             <div class="tools-section">
@@ -1052,7 +1054,7 @@
 
     <!-- Project 3 Modal -->
     <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project3ModalLabel">Business Intelligence Dashboard — Customer Segmentation</h5>
@@ -1060,10 +1062,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="row mb-4">
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <img src="images/dashboard.jpg" alt="BI Dashboard Project" class="img-fluid rounded mb-3">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <p><strong>Role:</strong> Data Analyst</p>
                             <p><strong>Timeline:</strong> Jun – Aug 2024</p>
                             <div class="tools-section">
@@ -1110,7 +1112,7 @@
 
     <!-- Project 4 Modal -->
     <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="project4ModalLabel">Tanami — Urban Farming Solution for Green Cities</h5>
@@ -1118,10 +1120,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="row mb-4">
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <img src="images/tanami.jpg" alt="Tanami Project" class="img-fluid rounded mb-3">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-12 col-md-6">
                             <p><strong>Role:</strong> Ideator, UX Designer</p>
                             <p><strong>Timeline:</strong> Oct – Nov 2024</p>
                             <div class="tools-section">
@@ -1190,7 +1192,7 @@
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="blog-preview-card">
                         <div class="blog-preview-img">
-                            <img src="images/pitching1.png" alt="Tips Pitching" class="img-fluid">
+                            <img src="images/blog1.png" alt="Tips Pitching" class="img-fluid">
                             <div class="blog-category">Public Speaking</div>
                         </div>
                         <div class="blog-preview-content">
@@ -1254,5 +1256,101 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Typed.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <!-- Custom JS -->
+     <script src="js/main.js"></script>
+
+         <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Typed.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+
+    <!-- Add this right before your closing </body> tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fix for modals on mobile devices
+        const projectModals = [
+            'project1Modal', 'project2Modal', 'project3Modal', 'project4Modal',
+            'businessProject1Modal', 'nestEyeModal', 'umkmModal', 'shrimpFarmModal',
+            'competitionModal', 'awardsModal', 'publicationsModal'
+        ];
+        
+        projectModals.forEach(modalId => {
+            const modalElement = document.getElementById(modalId);
+            if (modalElement) {
+                const modalInstance = new bootstrap.Modal(modalElement, {
+                    backdrop: 'static'  // This prevents closing when clicking outside
+                });
+                
+                // Find all buttons that trigger this modal
+                document.querySelectorAll(`[data-bs-target="#${modalId}"]`).forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        modalInstance.show();
+                    });
+                });
+            }
+        });
+    });
+
+      // Fix for modal backdrop issue
+      $(document).ready(function() {
+        // When any modal is hidden (closed)
+        $('.modal').on('hidden.bs.modal', function () {
+            // Remove any lingering backdrop
+            $('.modal-backdrop').remove();
+            // Ensure body is scrollable again
+            $('body').removeClass('modal-open');
+            $('body').css('overflow', '');
+            $('body').css('padding-right', '');
+        });
+        
+        // Additional fix for project cards interaction
+        $('.btn-close').on('click', function() {
+            setTimeout(function() {
+                // Force removal of backdrop and reset body
+                $('.modal-backdrop').remove();
+                $('body').removeClass('modal-open');
+                $('body').css('overflow', '');
+                $('body').css('padding-right', '');
+            }, 300);
+        });
+    });
+
+</script>
+
+<style>
+    /* Make text-muted lighter for better visibility on dark backgrounds */
+    .modal-content.bg-dark .text-muted {
+        color: #b0b0b0 !important; /* Lighter gray that's visible on dark backgrounds */
+    }
+    
+    /* Fix for modals on mobile */
+    @media (max-width: 767.98px) {
+        .modal-open {
+            position: fixed;
+            width: 100%;
+            overflow-y: scroll;
+        }
+        
+        .modal {
+            padding-right: 0 !important;
+        }
+        
+        .modal-dialog-centered {
+            display: flex;
+            align-items: center;
+            min-height: calc(100% - 1rem);
+        }
+        
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+    }
+</style>
+</body>
+

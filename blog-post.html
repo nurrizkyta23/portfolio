@@ -195,38 +195,77 @@
             text-align: center;
         }
         
+        /* Enhanced related post card styles */
         .blog-related-post-card {
             height: 100%;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            background-color: #111827;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
         .blog-related-post-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .blog-related-post-img-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
         }
         
         .blog-related-post-img {
-            height: 180px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-related-post-card:hover .blog-related-post-img {
+            transform: scale(1.05);
+        }
+        
+        .blog-related-post-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 12px;
+            background-color: var(--bs-primary);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 50px;
+            z-index: 2;
         }
         
         .blog-related-post-content {
-            padding: 1.25rem;
+            padding: 1.5rem;
         }
         
         .blog-related-post-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
             line-height: 1.4;
+            color: white;
         }
         
         .blog-related-post-date {
             font-size: 0.85rem;
-            color: #6c757d;
+            color: #adb5bd;
             margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-related-post-excerpt {
+            font-size: 0.9rem;
+            color: #e9ecef;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
         }
         
         /* Responsive adjustments */
@@ -256,6 +295,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -334,15 +374,20 @@
         </div>
     </section>
 
-    <!-- Related Posts -->
-    <div class="blog-related-posts" data-aos="fade-up">
-        <h3 class="blog-related-posts-title">You might also like</h3>
-        <div class="row g-4" id="related-posts">
-            <!-- Related posts will be loaded dynamically -->
+
+<!-- Related Posts -->
+<section class="py-5">
+    <div class="container">
+        <div class="blog-related-posts" data-aos="fade-up">
+            <h3 class="blog-related-posts-title">You might also like</h3>
+            <div class="row g-4" id="related-posts">
+                <!-- Related posts will be loaded dynamically -->
+            </div>
         </div>
     </div>
-</div>
 </section>
+
+<!-- Footer -->
 
     <!-- Footer -->
     <footer class="footer py-4">
